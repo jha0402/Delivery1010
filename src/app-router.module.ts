@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@nestjs/core';
 import { OrderModule } from 'src/main/order/order.module';
 import { AppModule } from './app.module';
 import { AlertModule } from './main/alert/alert.module';
+import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
     OrderModule,
     AlertModule,
     RouterModule.register(routes),
-    UsersModule
+    AuthModule,
+    UsersModule,
   ],
 })
 export class AppRouterModule {}
