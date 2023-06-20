@@ -3,13 +3,10 @@ import { ApiTags } from '@nestjs/swagger';
 
 @ApiTags('order')
 @Controller('')
-export class OrderController {
+export class OrdersController {
 
-    @Get()
-    getOrder(){
-        return "test";
-    }
-    @Get("/orders")
+  
+    @Get("")
     getOrders(){
         return "test";
     }
