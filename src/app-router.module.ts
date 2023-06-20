@@ -4,6 +4,7 @@ import { OrderModule } from 'src/main/order/order.module';
 import { AppModule } from './app.module';
 import { AlertModule } from './main/alert/alert.module';
 import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 const routes: Routes = [
   { path: 'order', module: OrderModule },
@@ -16,6 +17,7 @@ const routes: Routes = [
     AlertModule,
     RouterModule.register(routes),
     AuthModule,
+    UsersModule,
   ],
 })
 export class AppRouterModule {}
