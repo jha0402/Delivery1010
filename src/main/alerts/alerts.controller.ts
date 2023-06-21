@@ -3,7 +3,7 @@ import { ApiTags } from '@nestjs/swagger';
 
 @ApiTags('alert')
 @Controller('')
-export class AlertController {
+export class AlertsController {
     @Get()
     getAlert(){
         return "test";
