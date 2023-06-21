@@ -8,19 +8,26 @@ const usersInstance = plainToInstance(User, usersDb);
 
 @Injectable()
 export class UsersService {
-  constructor(private users: User[] = usersInstance) {}
-
-  createAccount({ name, email, password, role }: CreateAccountInput) {
-    console.log(
-      'name:',
-      name,
-      'email:',
-      email,
-      'password:',
-      password,
-      'role:',
-      role,
-    );
-    return true;
+  private users: User[] = usersInstance;
+  createAccount(
+    { name, email, password, role }: CreateAccountInput,
+    error = null,
+  ) {
+    try {
+      console.log(
+        'name:',
+        name,
+        'email:',
+        email,
+        'password:',
+        password,
+        'role:',
+        role,
+      );
+      if (error) throw new Error();
+      return { ok: true };
+    } catch (e) {
+      return { ok: false, error: 'error' };
+    }
   }
 }
