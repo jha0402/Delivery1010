@@ -2,6 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import * as usersDb from 'src/mock-db/users.json';
 import { UsersService } from './users.service';
 import { UsersController } from './users.controller';
+import { UserRole } from './entities/user.entity';
 
 describe('UsersService', () => {
   let service: UsersService;
@@ -24,7 +25,7 @@ describe('UsersService', () => {
       name: 'jeonghyun',
       email: 'test@email.com',
       password: 'test.password',
-      role: 0,
+      role: UserRole.Client,
       address: 'asdf123',
     };
 
