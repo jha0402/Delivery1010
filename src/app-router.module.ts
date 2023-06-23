@@ -6,7 +6,6 @@ import { AuthModule } from './main/auth/auth.module';
 import { UsersModule } from './main/users/users.module';
 import { AlertsModule } from './main/alerts/alerts.module';
 
-
 const routes: Routes = [
   { path: 'orders', module: OrdersModule },
   { path: 'alerts', module: AlertsModule },
@@ -16,7 +15,6 @@ const routes: Routes = [
 
 @Module({
   imports: [
-
     RouterModule.register(routes),
     OrdersModule,
     AlertsModule,
