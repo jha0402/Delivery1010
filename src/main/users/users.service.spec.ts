@@ -10,7 +10,7 @@ describe('UsersService', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      controllers: [UsersController],
+      // controllers: [UsersController],
       providers: [UsersService],
       imports: [TypeOrmModule.forFeature([User])],
     }).compile();

@@ -11,10 +11,13 @@ const usersInstance = plainToInstance(User, usersDb);
 @Injectable()
 export class UsersService {
   constructor(@InjectRepository(User) private users: Repository<User>) {}
-  async createAccount(
-    { name, email, password, role, address }: CreateAccountInput,
-    error = null,
-  ): Promise<CreateAccountOutput> {
+  async createAccount({
+    name,
+    email,
+    password,
+    role,
+    address,
+  }: CreateAccountInput): Promise<CreateAccountOutput> {
     try {
       const found = await this.users.findOne({ where: { email } });
       if (found) {

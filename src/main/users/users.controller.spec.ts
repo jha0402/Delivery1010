@@ -10,8 +10,8 @@ describe('UsersController', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [UsersController],
-      providers: [UsersService],
-      imports: [TypeOrmModule.forFeature([User])],
+      // providers: [UsersService],
+      // imports: [TypeOrmModule.forFeature([User])],
     }).compile();
 
     controller = module.get<UsersController>(UsersController);
