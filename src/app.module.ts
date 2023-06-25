@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import * as Joi from 'joi';
 import { User } from './main/users/entities/user.entity';
+import { DataSource } from 'typeorm';
 @Module({
   imports: [
     AppRouterModule,
@@ -32,4 +33,6 @@ import { User } from './main/users/entities/user.entity';
     }),
   ],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(private dataSource: DataSource) {}
+}
