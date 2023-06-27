@@ -1,7 +1,8 @@
+import { CoreEntity } from 'src/main/common/entities/core.entity';
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 
 @Entity()
-export class Order {
+export class Order extends CoreEntity{
   @PrimaryGeneratedColumn()
   OrderNo?: number;
 
@@ -22,10 +23,4 @@ export class Order {
 
   @Column({ default: 'pending' })
   OrderStatus: number; // 0 : 주문준비중, 1 : 주문확정 2 : 주문취소
-
-  @CreateDateColumn()
-  SysRegDT: Date;
-
-  @UpdateDateColumn()
-  SysModDT?: Date;
 }
