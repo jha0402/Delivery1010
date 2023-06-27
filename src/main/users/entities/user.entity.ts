@@ -1,11 +1,17 @@
-import { IsEmail, IsEnum, IsNumber, IsString } from 'class-validator';
+import { IsEmail, IsEnum, IsString } from 'class-validator';
 import { CoreEntity } from 'src/main/common/entities/core.entity';
-import { Column } from 'typeorm';
+import { Column, Entity } from 'typeorm';
 
 export enum UserRole {
   Client = 'Client', // 0
   StoreManager = 'StoreManager', // 1
 }
+export enum UserStatus {
+  Active = 'Active',
+  Blocked = 'Blocked',
+  Deleted = 'Deleted',
+}
+@Entity()
 export class User extends CoreEntity {
   @Column()
   @IsString()
@@ -15,7 +21,7 @@ export class User extends CoreEntity {
   @IsEmail()
   email: string;
 
-  @Column({ select: false })
+  @Column()
   @IsString()
   password: string;
 
@@ -25,14 +31,9 @@ export class User extends CoreEntity {
 
   @Column()
   @IsString()
-  address?: string;
+  address: string;
 
-  // @Column({ unique: true })
-  // @IsNumber()
-  // cartId?: number;
-  // favorites?: Store[];
-  // reviews?: Review[];
-  @Column({ unique: true })
-  @IsNumber()
-  storeId?: number;
+  @Column({ type: 'enum', enum: UserStatus })
+  @IsEnum(UserStatus)
+  status: UserStatus;
 }
