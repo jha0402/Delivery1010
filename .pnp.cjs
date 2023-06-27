@@ -4357,6 +4357,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "supports-color"\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["virtual:c299c4eaa514d842daa3bee05b0fe06ca77abfab567080564bbd32733c456e5f52147964b6eddb571f694757608981455a0b21a18ba4c7a8490201c6ad5af39e#npm:3.2.7", {\
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-0127423fc9/0/cache/debug-npm-3.2.7-754e818c7a-b3d8c59407.zip/node_modules/debug/",\
+          "packageDependencies": [\
+            ["debug", "virtual:c299c4eaa514d842daa3bee05b0fe06ca77abfab567080564bbd32733c456e5f52147964b6eddb571f694757608981455a0b21a18ba4c7a8490201c6ad5af39e#npm:3.2.7"],\
+            ["@types/supports-color", null],\
+            ["ms", "npm:2.1.3"],\
+            ["supports-color", null]\
+          ],\
+          "packagePeers": [\
+            "@types/supports-color",\
+            "supports-color"\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["decompress-response", [\
@@ -6889,6 +6903,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jsonfile", "npm:6.1.0"],\
             ["graceful-fs", "npm:4.2.11"],\
             ["universalify", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["keygrip", [\
+        ["npm:1.1.0", {\
+          "packageLocation": "./.yarn/cache/keygrip-npm-1.1.0-8da030c3ff-078cd16a46.zip/node_modules/keygrip/",\
+          "packageDependencies": [\
+            ["keygrip", "npm:1.1.0"],\
+            ["tsscmp", "npm:1.0.6"]\
           ],\
           "linkType": "HARD"\
         }]\
