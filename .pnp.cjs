@@ -37,6 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/swagger", "virtual:27f9f62c34b95e6399f4c5462ab16811dcb888053520f4584210534661ccc03ef96005eaef21569ac0e6ddc6fccc262d71a30400396b17247b4c25006cbd3c75#npm:7.0.0"],\
             ["@nestjs/testing", "virtual:27f9f62c34b95e6399f4c5462ab16811dcb888053520f4584210534661ccc03ef96005eaef21569ac0e6ddc6fccc262d71a30400396b17247b4c25006cbd3c75#npm:9.4.3"],\
             ["@nestjs/typeorm", "virtual:27f9f62c34b95e6399f4c5462ab16811dcb888053520f4584210534661ccc03ef96005eaef21569ac0e6ddc6fccc262d71a30400396b17247b4c25006cbd3c75#npm:10.0.0"],\
+            ["@types/cookie-session", "npm:2.0.44"],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.5.1"],\
             ["@types/node", "npm:18.16.12"],\
@@ -2123,6 +2124,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/cookie-session", [\
+        ["npm:2.0.44", {\
+          "packageLocation": "./.yarn/cache/@types-cookie-session-npm-2.0.44-3831b098e5-b67906616c.zip/node_modules/@types/cookie-session/",\
+          "packageDependencies": [\
+            ["@types/cookie-session", "npm:2.0.44"],\
+            ["@types/express", "npm:4.17.17"],\
+            ["@types/keygrip", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/cookiejar", [\
         ["npm:2.1.2", {\
           "packageLocation": "./.yarn/cache/@types-cookiejar-npm-2.1.2-2588120a7c-f6e1903454.zip/node_modules/@types/cookiejar/",\
@@ -2262,6 +2274,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-json-schema-npm-7.0.12-f05cfc0e99-00239e9723.zip/node_modules/@types/json-schema/",\
           "packageDependencies": [\
             ["@types/json-schema", "npm:7.0.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/keygrip", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/@types-keygrip-npm-1.0.2-2e57be51bc-60bc2738a4.zip/node_modules/@types/keygrip/",\
+          "packageDependencies": [\
+            ["@types/keygrip", "npm:1.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4461,6 +4482,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/swagger", "virtual:27f9f62c34b95e6399f4c5462ab16811dcb888053520f4584210534661ccc03ef96005eaef21569ac0e6ddc6fccc262d71a30400396b17247b4c25006cbd3c75#npm:7.0.0"],\
             ["@nestjs/testing", "virtual:27f9f62c34b95e6399f4c5462ab16811dcb888053520f4584210534661ccc03ef96005eaef21569ac0e6ddc6fccc262d71a30400396b17247b4c25006cbd3c75#npm:9.4.3"],\
             ["@nestjs/typeorm", "virtual:27f9f62c34b95e6399f4c5462ab16811dcb888053520f4584210534661ccc03ef96005eaef21569ac0e6ddc6fccc262d71a30400396b17247b4c25006cbd3c75#npm:10.0.0"],\
+            ["@types/cookie-session", "npm:2.0.44"],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.5.1"],\
             ["@types/node", "npm:18.16.12"],\
