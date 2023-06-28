@@ -15,9 +15,10 @@ import { AppService } from './app.service';
 const cookieSession = require('cookie-session');
 @Module({
   imports: [
-    OrdersModule,
-    AlertsModule,
-    UsersModule,
+    AppRouterModule,
+    // OrdersModule,
+    // AlertsModule,
+    // UsersModule,
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: process.env.NODE_ENV === 'dev' ? '.env.dev' : '.env.test',

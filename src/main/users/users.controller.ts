@@ -24,7 +24,7 @@ import { User } from './entities/user.entity';
 import { CurrentUser } from './decorators/current-user.decorator';
 
 @ApiTags('users')
-@Controller('users')
+@Controller()
 @Serialize(UserDto)
 export class UsersController {
   constructor(
