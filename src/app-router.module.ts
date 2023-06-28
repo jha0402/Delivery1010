@@ -5,6 +5,7 @@ import { AppModule } from './app.module';
 import { AuthModule } from './main/auth/auth.module';
 import { UsersModule } from './main/users/users.module';
 import { AlertsModule } from './main/alerts/alerts.module';
+import { StoresModule } from './main/stores/stores.module';
 
 const routes: Routes = [
   { path: 'orders', module: OrdersModule },
@@ -20,6 +21,7 @@ const routes: Routes = [
     AlertsModule,
     AuthModule,
     UsersModule,
+    StoresModule,
   ],
   providers: [],
 })
