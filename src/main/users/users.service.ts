@@ -1,34 +1,51 @@
-import { Injectable } from '@nestjs/common';
-import { User, UserRole } from './entities/user.entity';
-import { CreateAccountInput, CreateAccountOutput } from './dto/create-user.dto';
-import * as usersDb from 'src/mock-db/users.json';
-import { plainToInstance } from 'class-transformer';
+import { Injectable, NotFoundException } from '@nestjs/common';
+import { User, UserRole, UserStatus } from './entities/user.entity';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 
-const usersInstance = plainToInstance(User, usersDb);
-
 @Injectable()
 export class UsersService {
-  constructor(@InjectRepository(User) private users: Repository<User>) {}
-  async createAccount({
-    name,
-    email,
-    password,
-    role,
-    address,
-  }: CreateAccountInput): Promise<CreateAccountOutput> {
-    try {
-      const found = await this.users.findOne({ where: { email } });
-      if (found) {
-        return { ok: false, error: '이미 등록된 이메일입니다' };
-      }
-      await this.users.save(
-        this.users.create({ name, email, password, role, address }),
-      );
-      return { ok: true };
-    } catch (e) {
-      return { ok: false, error: '회원가입에 실패 했습니다' };
+  constructor(@InjectRepository(User) private repo: Repository<User>) {}
+  create(
+    name: string,
+    email: string,
+    password: string,
+    role: UserRole,
+    address: string,
+    status: UserStatus,
+  ) {
+    const user = this.repo.create({
+      name,
+      email,
+      password,
+      role,
+      address,
+      status,
+    });
+    return this.repo.save(user);
+  }
+  findOne(id: number) {
+    if (!id) {
+      return null;
     }
+    return this.repo.findOneBy({ id });
+  }
+  async find(email: string) {
+    return this.repo.find({ where: { email } });
+  }
+  async update(id: number, attrs: Partial<User>) {
+    const user = await this.findOne(id);
+    if (!user) {
+      throw new NotFoundException('user not found');
+    }
+    Object.assign(user, attrs);
+    return this.repo.save(user);
+  }
+  async remove(id: number) {
+    const user = await this.findOne(id);
+    if (!user) {
+      throw new NotFoundException('user not found');
+    }
+    return this.repo.remove(user);
   }
 }
