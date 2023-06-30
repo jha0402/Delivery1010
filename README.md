@@ -3,6 +3,7 @@
 항해99 플러스 1기 10조
 
 - 배달 시스템 서버 구현
+  - TDD
 
 ## 팀
 
@@ -24,6 +25,11 @@
 ## 코드 컨벤션
 
 [참고 코드 컨벤션](https://narhakobyan.github.io/awesome-nest-boilerplate/docs/naming-cheatsheet.html#english-language)
+
+## 문서
+
+- [테스트 시나리오](https://docs.google.com/spreadsheets/d/1TtqDWS7RMZ5qjTMQK4ARcSQ4By8QjddDcR17KhPT-iE/edit?usp=sharing)
+- [DB 설계](https://www.erdcloud.com/d/6xY9h4ECqfFiPbqua)
 
 ## 설치
 
