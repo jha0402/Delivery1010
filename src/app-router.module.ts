@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@nestjs/core';
 import { OrdersModule } from 'src/main/orders/orders.module';
 import { UsersModule } from './main/users/users.module';
 import { AlertsModule } from './main/alerts/alerts.module';
+import { PaymentModule } from './main/payment/payment.module';
 
 const routes: Routes = [
   { path: 'orders', module: OrdersModule },
   { path: 'alerts', module: AlertsModule },
   { path: 'users', module: UsersModule },
+  { path: 'payment', module: PaymentModule },
 ];
 
 @Module({
@@ -16,6 +18,7 @@ const routes: Routes = [
     OrdersModule,
     AlertsModule,
     UsersModule,
+    PaymentModule,
   ],
   providers: [],
 })
