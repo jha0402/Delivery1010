@@ -1,6 +1,7 @@
 import { IsEmail, IsEnum, IsString } from 'class-validator';
 import { CoreEntity } from 'src/main/common/entities/core.entity';
-import { Column, Entity } from 'typeorm';
+import { Payment } from 'src/main/payment/entities/payment.entity';
+import { Column, Entity, OneToMany } from 'typeorm';
 
 export enum UserRole {
   Client = 'Client', // 0
@@ -36,4 +37,7 @@ export class User extends CoreEntity {
   @Column({ type: 'enum', enum: UserStatus })
   @IsEnum(UserStatus)
   status: UserStatus;
+
+  @OneToMany((type) => Payment, (payment) => payment.user)
+  payments: Payment[];
 }
