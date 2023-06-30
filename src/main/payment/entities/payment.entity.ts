@@ -1,4 +1,4 @@
-import { IsEnum, IsNumber, IsString } from 'class-validator';
+import { IsEnum, IsNumber } from 'class-validator';
 import { CoreEntity } from 'src/main/common/entities/core.entity';
 import { Store } from 'src/main/stores/entities/store.entity';
 import { User } from 'src/main/users/entities/user.entity';
