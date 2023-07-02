@@ -3,7 +3,7 @@ name: Deploy to Amazon ECR
 on:
   push:
     branches:
-      - main
+      - develop
 env:
   AWS_REGION: ap-northeast-2
   ECR_REGISTRY: 819574247352.dkr.ecr.ap-northeast-2.amazonaws.com/repository-delivery
